@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@animal) do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :scream %>
+      <%= f.text_field :scream, class: 'form-control' %>
+
+      <%= f.label :kept %>
+      <%= f.check_box :kept, class: 'form-control' %>
+
+      <%= f.submit "Save changes", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>

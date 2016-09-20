@@ -1,0 +1,43 @@
+<h1> Zoo's list </h1>
+
+<table>
+  <tr>
+    <th>Nom </th>
+    <th>Cri</th>
+  </tr>
+
+<% @zoo_animals.each do |za| %>
+  <tr>
+    <td><%= za.name %></td>
+    <td><%= za.scream %></td>
+    <td><%= link_to "Edit", edit_animal_path(za) %></td>
+  </tr>
+<% end %>
+</table>
+
+<!-- <form accept-charset="UTF-8" action="/clients" method="post">
+  <input type="text" name="animal[name]" placeholder="Entrer un nom"/>
+  <input type="text" name="scream[scream]" placeholder="Entrer un cri" />
+</form> -->
+
+<br>
+
+<h1> Keeper's list </h1>
+
+<table>
+  <tr>
+    <th>Nom </th>
+    <th>Cri</th>
+  </tr>
+
+<% @keeper_animals.each do |ka| %>
+  <tr>
+    <td><%= ka.name %></td>
+    <td><%= ka.scream %></td>
+  </tr>
+<% end %>
+</table>
+
+<br> <br>
+
+<%= link_to "New animal", new_animal_path %>
